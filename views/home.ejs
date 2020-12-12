@@ -1,0 +1,9 @@
+<%- include("partials/header") -%>
+
+<% for(let i=0;i<found.length;i++){ %>
+  <% let href="/posts/"+found[i].title; console.log(href); %>
+<h1><%= found[i].title %></h1>
+<p><%=  found[i].data.substring(0,200)+".." %> <a href="<%- href -%>">read more</a></p>
+<% } %>
+
+<%- include("partials/footer") -%>
